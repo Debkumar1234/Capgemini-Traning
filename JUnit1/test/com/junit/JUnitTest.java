@@ -1,0 +1,16 @@
+package com.junit;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class JUnitTest {
+
+	@Test
+	void test() {
+		Junit j = new Junit();
+		int actual = j.add(1, 4);
+		int expected = 6;
+		assertEquals(expected, actual);
+	}
+}
