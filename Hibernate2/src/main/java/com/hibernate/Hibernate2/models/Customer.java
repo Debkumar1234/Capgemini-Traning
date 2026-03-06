@@ -8,12 +8,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Emp")
 public class Customer {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
 	@Column(name = "id")
-	private int id;
+	private int id; 
 	@Column
 	private String name;
 	@Column(unique = true)
@@ -43,5 +42,9 @@ public class Customer {
 	}
 	public void setPhoneNo(String phoneNo) {
 		this.phoneNo = phoneNo;
+	}
+	@Override
+	public String toString() {
+		return "Customer [id=" + id + ", name=" + name + ", phoneNo=" + phoneNo + "]";
 	}
 }
