@@ -1,22 +1,26 @@
 package com.capgemini.Spring;
 
+
 public class Employee {
 	private int id;
 	private String name;
 	private String email;
 	private double salary;
+	private Student student1;
 
 	public Employee() {
 		System.out.println("Employee constructor called.");
 	}
 
-	public Employee(int id, String name, String email, double salary) {
-		System.out.println("Args Employee constructor called.");
+	public Employee(int id, String name, String email, double salary, Student student) {
+		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.salary = salary;
+		this.student1 = student;
 	}
+
 
 	public int getId() {
 		return id;
@@ -32,6 +36,14 @@ public class Employee {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public Student getStudent1() {
+		return student1;
+	}
+
+	public void setStudent1(Student student) {
+		this.student1 = student;
 	}
 
 	public String getEmail() {
@@ -52,6 +64,7 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", email=" + email + ", salary=" + salary + "]";
+		return "Employee [id=" + id + ", name=" + name + ", email=" + email + ", salary=" + salary + ", student="
+				+ student1 + "]";
 	}
 }

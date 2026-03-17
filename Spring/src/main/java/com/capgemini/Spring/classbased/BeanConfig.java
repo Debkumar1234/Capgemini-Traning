@@ -1,0 +1,25 @@
+package com.capgemini.Spring.classbased;
+
+import java.util.List;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan(basePackages = "com.capgemini.Spring")
+public class BeanConfig {
+	@Bean
+	public List<Integer> listProvider(){
+		return List.of(1,2,3,4,5,6,7,8,9);
+	}
+	
+	@Bean(name="ninza")
+	public Bike bikeProvider() {
+		Bike bike = new Bike();
+		bike.setBikeId(12);
+		bike.setBikeName("Z900");
+		bike.setColour("Green");
+		return bike;
+	}
+}
